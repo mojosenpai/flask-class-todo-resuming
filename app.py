@@ -28,7 +28,7 @@ def index():
 
     elif request.method == 'GET':
         tasks = Task.query.order_by(Task.date_created).all()
-        return render_template('index.html', tasks=tasks)
+        return render_template('index.html', tasks=tasks, x=2)
 
 
 @app.route('/delete/<int:id>')
